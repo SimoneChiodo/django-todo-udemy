@@ -34,7 +34,7 @@
                 {{ task.task }}
                 <span style="position: relative; float: right;">
                   <a class="btn btn-success" href="{% url 'markAsDone' task.id %}"><i class="fa fa-check"></i> Mark as Done</a>
-                  <a class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                  <a class="btn btn-danger" href="{% url 'deleteTask' task.id %}"><i class="fa fa-trash"></i></a>
                   <a class="btn btn-primary" href="{% url 'editTask' task.id %}"><i class="fa fa-pencil"></i></a>
                 </span>
               </div>
