@@ -17,3 +17,6 @@ def markAsUndone(request, pk):
   task.is_completed = False
   task.save()
   return redirect('home')
+
+def editTask(request, pk):
+  pass
