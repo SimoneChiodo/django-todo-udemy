@@ -1,4 +1,4 @@
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, render
 from .models import Task
 
 def addTask(request):
@@ -19,4 +19,7 @@ def markAsUndone(request, pk):
   return redirect('home')
 
 def editTask(request, pk):
-  pass
+  # task = get_object_or_404(Task, pk)
+
+  # task.save()
+  return render(request, 'editTask.html')
